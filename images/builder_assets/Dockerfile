@@ -54,8 +54,8 @@ RUN --mount=type=cache,target=/root/.npm \
         cd $(dirname $file); \
         npm install \
     ); done && \
-    npm run yves && \
-    npm run zed && \
+    npm run yves:production && \
+    npm run zed:production && \
     chown -R spryker:spryker /assets
 
 VOLUME [ "/assets" ]
